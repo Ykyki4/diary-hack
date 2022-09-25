@@ -1,4 +1,4 @@
-commendations_examples = ["Молодец!",
+COMMENDATION_EXAMPLES = ["Молодец!",
 "Отлично!",
 "Хорошо!",
 "Гораздо лучше, чем я ожидал!",
