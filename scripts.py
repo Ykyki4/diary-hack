@@ -7,7 +7,6 @@ def create_commendation(child_name, subject, year_of_study, group_letter):
 	last_lesson = Lesson.objects.filter(year_of_study=year_of_study, 
 										group_letter=group_letter, 
 										subject__title=subject).order_by('-date').first()
-
 	Commendation.objects.create(
 					text=random.choice(COMMENDATION_EXAMPLES), 
 					created=last_lesson.date, 
@@ -20,7 +19,6 @@ def create_commendation(child_name, subject, year_of_study, group_letter):
 def remove_chastisements(schoolkid):
 	child = Schoolkid.objects.get(full_name__contains=schoolkid)
 	Chastisement.objects.filter(schoolkid=child).delete()
-
 
 
 def fix_marks(schoolkid):
